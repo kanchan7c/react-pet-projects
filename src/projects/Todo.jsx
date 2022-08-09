@@ -36,18 +36,26 @@ function Todo() {
 
   return (
     <div>
-      <Link to='/'>Go back to Home</Link>
-      <h1>My TODO List</h1>
-      <form onSubmit={createTODO} className='todo-form'>
+      <Link
+        to='/'
+        className='px-1 py-2 border-gray-500 border-2 rounded bg-gray-500 text-gray-50 align-middle'
+      >
+        Go back to Home
+      </Link>
+      <h1 className='text-3xl py-3 my-2 text-center'>My TODO List</h1>
+      <form onSubmit={createTODO} className='flex justify-center'>
         <input
           // onKeyDown={checkForEnter}
           type='text'
-          className='todo-text'
+          className='px-2 py-3 border-gray-300 border-2 rounded w-[50%] outline-none'
           placeholder='Type your TODO here..'
           onChange={(event) => setTask(event.target.value)}
           value={task}
         />
-        <button type='submit' className='submit'>
+        <button
+          type='submit'
+          className='px-2 py-3 border-green-500 border-2 rounded mx-2 bg-green-500 hover:scale-95'
+        >
           Create TODO
         </button>
       </form>
