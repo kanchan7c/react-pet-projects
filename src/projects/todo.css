@@ -1,0 +1,99 @@
+h1 {
+  text-align: center;
+}
+
+.todo {
+  position: relative;
+  width: 20vw;
+  height: 30vh;
+
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #0000007e;
+  border-radius: 5px;
+  background-color: rgb(244, 244, 170);
+  columns: 3;
+  padding: 0.5em;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /* padding: 2em; */
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+.todo-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  columns: 3;
+  flex-wrap: wrap;
+}
+.todo-text {
+  display: flex;
+  width: 50%;
+  /* align-items: center; */
+  justify-content: center;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  color: slategrey;
+}
+
+.todo-text::placeholder {
+  color: lightgray;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.submit,
+.delete-btn {
+  padding: 0.5em 1em;
+  background-color: greenyellow;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: rgb(14, 14, 14);
+  cursor: pointer;
+  transition: tranform 0.3s ease;
+}
+
+.delete-btn {
+  height: 5vh;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: tranform 0.3s ease;
+  background-color: rgb(246, 110, 110);
+  color: white;
+  font-weight: 700;
+}
+
+.submit:hover,
+.delete-btn:hover {
+  transform: scale(0.98);
+}
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 2em;
+  width: 100%;
+  padding: 2em;
+  margin-right: auto;
+  /* background-color: beige; */
+  min-height: 80vh;
+  overflow-y: scroll;
+  font-size: 1.2rem;
+}
+
+.todo-item {
+  padding: 0 1em;
+}
